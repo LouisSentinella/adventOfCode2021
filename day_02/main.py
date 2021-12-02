@@ -9,9 +9,9 @@ def part_one(inputs_list):
     for i in inputs_list:
         if i.startswith("forward"):
             horizontal_final += int(i.split()[1])
-        if i.startswith("up"):
+        elif i.startswith("up"):
             vertical_final -= int(i.split()[1])
-        if i.startswith("down"):
+        elif i.startswith("down"):
             vertical_final += int(i.split()[1])
     return horizontal_final * vertical_final
 
@@ -24,9 +24,9 @@ def part_two(inputs_list):
         if i.startswith("forward"):
             horizontal_final += int(i.split()[1])
             vertical_final += (int(i.split()[1]) * aim)
-        if i.startswith("up"):
+        elif i.startswith("up"):
             aim -= int(i.split()[1])
-        if i.startswith("down"):
+        elif i.startswith("down"):
             aim += int(i.split()[1])
     return horizontal_final * vertical_final
 
